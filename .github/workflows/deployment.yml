@@ -5,7 +5,16 @@ on:
       - opened
       - reopened
       - synchronize
+    branches:
+      - main
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feature/**'
+    paths-ignore:
+      - '.github/workflows/*'
 
 jobs:
   test:
