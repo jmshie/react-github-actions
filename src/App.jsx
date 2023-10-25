@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import MainContent from './components/MainContent';
 import logo from './assets/images/logo.png';
 
