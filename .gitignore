@@ -7,8 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
+# Only ignore root level node_modules and dist because the custom JS
+# action (deploy-s3-js) needs the ones in its directory 
+/node_modules
+/dist
 dist-ssr
 *.local
 
