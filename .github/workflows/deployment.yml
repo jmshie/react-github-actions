@@ -84,6 +84,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Need code in order to run action
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Output contents 2
+        run: ls
       - name: Get build artifacts
         uses: actions/download-artifact@v3
         with:
@@ -91,10 +95,7 @@ jobs:
           path: dist
       - name: Output contents
         run: ls
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Output contents 2
-        run: ls
+     
       - name: Output filename
         run: echo "${{ needs.build.outputs.script-file }}"
       - name: Deploy
